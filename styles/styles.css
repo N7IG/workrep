@@ -28,10 +28,13 @@ header h1 {
     background-color:#5f4747;
     border:2px solid #5f4747;
     color: aliceblue;
+    outline: none;
 }
 
 .query-submit:hover {
     cursor: pointer;
+    border-color: #805d5d;
+    background-color: #805d5d;
 }
 
 main {
@@ -40,11 +43,14 @@ main {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+    height: 90%;
 }
 
 main aside {
     width: 400px;
     padding: 10px;
+    overflow-y: scroll;
 }
 
 li h2 {

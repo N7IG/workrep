@@ -6,9 +6,17 @@ let description = document.querySelector('.mov-description');
 
 function displayElement(movieJSON){
     // console.log(movieJSON);
-    resultList.appendChild(constructElement(movieJSON.title, 'http://image.tmdb.org/t/p/w185/' + movieJSON.backdrop_path, movieJSON.credits.cast.slice(0, 3), movieJSON.id));
+    
+    let movie = constructElement(movieJSON.title, 'http://image.tmdb.org/t/p/w185' + movieJSON.backdrop_path, movieJSON.credits.cast.slice(0, 3), movieJSON.id);
+    resultList.appendChild(movie);
     let hr = document.createElement("hr");
     resultList.appendChild(hr);
+
+    //THIS PART IS WEIRD TOO
+    if (movie === resultList.firstChild) {
+        movie.firstChild.click();
+        console.log(movie.getAttribute('data-id')); 
+    }
 }
 
 function updateDetails(resp) {
@@ -17,6 +25,10 @@ function updateDetails(resp) {
     average.innerHTML = resp.vote_average;
     poster.src = `http://image.tmdb.org/t/p/w500/${resp.backdrop_path}`
     description.innerHTML = resp.overview;
+}
+
+function refreshList(){
+    resultList.innerHTML = "";
 }
 
 function constructElement(title, imgURL, castArray, movId){
@@ -40,7 +52,7 @@ function constructElement(title, imgURL, castArray, movId){
 
     let actorList = document.createElement("ul");
     let tmpLi = null;
-    for (i = 0; i < actorNumber; i++) {
+    for (i = 0; i < Math.min(actorNumber, castArray.length); i++) { 
         tmpLi = document.createElement("li");
         tmpLi.innerHTML = castArray[i].name;
         actorList.appendChild(tmpLi);
