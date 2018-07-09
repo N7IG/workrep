@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
 
-<head>
+<html>
+  <head>
   <title>RX Movies</title>
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -11,57 +11,20 @@
 
   <header>
     <h1>RX Movies</h1>
-    <form action="#">
-      <input type="text" class="query-input">
+    <div>
+      <input type="text" class="query-input" value="Star">
       <input type="submit" value="Search" class="query-submit">
-    </form>
+    </div>
   </header>
 
   <main>
     <aside class="movie-aside">
-      <ul class="result-list">
-        <li>
-          <h2>Movie Title</h2>
-          <img src="http://via.placeholder.com/140x100" alt="thumbnail" class="thumbnail">
-          <hx>Cast:</hx>
-          <ul>
-            <li>Jennifer Lawrence</li>
-            <li>Chris Pratt</li>
-            <li>Somebody Else</li>
-          </ul>
-        </li>
-      </ul>
-      <hr/>
-      <ul class="result-list">
-        <li>
-          <h2>Movie Title</h2>
-          <img src="http://via.placeholder.com/140x100" alt="thumbnail" class="thumbnail">
-          <hx>Cast:</hx>
-          <ul>
-            <li>Jennifer Lawrence</li>
-            <li>Chris Pratt</li>
-            <li>Somebody Else</li>
-          </ul>
-        </li>
-      </ul>
-      <hr/>
-      <ul class="result-list">
-        <li>
-          <h2>Movie Title</h2>
-          <img src="http://via.placeholder.com/140x100" alt="thumbnail" class="thumbnail">
-          <hx>Cast:</hx>
-          <ul>
-            <li>Jennifer Lawrence</li>
-            <li>Chris Pratt</li>
-            <li>Somebody Else</li>
-          </ul>
-          </li>
-        </ul>
+      <ul class="result-list"></ul>
     </aside>
 
     <div class="info-box">
-        <h2>Movie Title</h2>
-        <img src="http://via.placeholder.com/400x200" >
+        <h2 class="info-title">Movie Title</h2>
+        <img src="" alt = "Poster" class="mov-poster">
         <ul class="rate-list">
           <li><i class="far fa-star"></i></li>
           <li><i class="far fa-star"></i></li>
@@ -69,13 +32,17 @@
           <li><i class="far fa-star"></i></li>
           <li><i class="far fa-star"></i></li>
         </ul>
-        <div>Total rating: <span>4.7</span></div>
-        <p>
+        <div>Average: <span class="average">4.1</span></div>
+        <p class="mov-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quasi aut quam, distinctio accusantium placeat atque esse labore ullam. Earum explicabo nulla architecto maxime unde perspiciatis doloremque fugiat, tenetur ea.
         </p>
     </div>
   </main>
 
-</body>
+  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.js"></script> -->
+  <script type="text/javascript" src="./RX Movies_files/rxjs.umd.js.download"></script>
+  <script src="./src/script.js"></script>
+  <script src="./src/visual.js"></script>
 
-</html>
+
+</body></html>

@@ -1,6 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family: sans-serif;
 }
 
 .result-list li {
@@ -42,8 +43,12 @@ main {
 }
 
 main aside {
-    width: 300px;
+    width: 400px;
     padding: 10px;
+}
+
+li h2 {
+    cursor: pointer;
 }
 
 ul {
@@ -65,9 +70,21 @@ hx {
 .thumbnail {
     float: left;
     margin-right: 10px;
+    width: 140px;
 }
 
-.result-list:after {
+.result-list li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.result-list li h2{
+    width: 100%;
+    background-color: burlywood;
+    border-radius: 5px;
+}
+
+.result-list li:after {
     content: "";
     display: table;
     clear: both;
@@ -82,6 +99,6 @@ hx {
     color: orange;
 }
 
-.mov-description {
-    margin: 0 20px 20px 20px;
+.img-wrapper {
+    width: 140px;   
 }
